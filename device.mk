@@ -643,4 +643,4 @@ PRODUCT_BOOT_JARS += \
 # Vendor
 $(call inherit-product, vendor/xiaomi/peridot/peridot-vendor.mk)
 # Basic Call Recorder
-$(call inherit-product-if-exists, vendor/bcr/bcr.mk)
+$(call inherit-product, vendor/bcr/bcr.mk)

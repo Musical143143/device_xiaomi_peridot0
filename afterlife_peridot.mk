@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := pixelstar_peridot
+PRODUCT_NAME := afterlife_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -58,6 +58,15 @@ TARGET_SUPPORTS_CLEAR_CALLING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_SUPPORTS_ADPATIVE_CHARGING := true
+AFTERLIFE_MAINTAINER := BASUBHAJANTRI
+AFTERLIFE_GAPPS := true
+AFTERLIFE_EXTRA := true
+BUILD_GMAIL := true
+BUILD_GCALC := true
+USE_PIXEL_CHARGING := true
+TARGET_SUPPORTS_BLUR := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+AFTERLIFE_BUILD_TYPE := OFFICIAL
 
 # Add Official Stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \

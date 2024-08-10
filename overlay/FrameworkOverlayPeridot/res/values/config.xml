@@ -1013,7 +1013,14 @@
          meanings. -->
     <integer name="config_defaultRingVibrationIntensity">3</integer>
 
-    <!-- Vibrator pattern for feedback about a long screen/key press -->
+
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
+
+    <!-- Type of the udfps long press sensor. Empty if long press is not supported. -->
+    <string name="config_dozeUdfpsLongPressSensorType" translatable="false">org.lineageos.sensor.udfps</string>
+ 
+   <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
         <item>1</item>

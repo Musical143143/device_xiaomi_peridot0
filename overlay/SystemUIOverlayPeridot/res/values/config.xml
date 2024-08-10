@@ -7,6 +7,15 @@
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
 
+
+   <!-- Udfps vendor code -->
+    <integer name="config_udfpsVendorCode">22</integer>
+
+    <!-- Whether to pulse onFingerDown actions instead
+        of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">true</bool>
+
+
     <!-- Bottom margin size when fingerprint in display is active -->
     <dimen name="keyguard_indication_margin_bottom">6dp</dimen>
 

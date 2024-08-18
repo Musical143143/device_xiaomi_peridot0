@@ -584,3 +584,7 @@ service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-serv
     socket audio_us_socket_1 seqpacket 0666 system system
     capabilities BLOCK_SUSPEND
     rlimit rtprio 10 10
+
+
+# Disable statsd service to prevent additional battery drain
+    stop statsd

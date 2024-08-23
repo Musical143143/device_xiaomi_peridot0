@@ -586,5 +586,3 @@ service vendor.sensors-hal-multihal /vendor/bin/hw/android.hardware.sensors-serv
     rlimit rtprio 10 10
 
 
-# Disable statsd service to prevent additional battery drain
-    stop statsd

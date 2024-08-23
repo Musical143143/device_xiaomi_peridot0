@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := blaze_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -44,6 +44,12 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 RISING_BUILDTYPE := OFFICIAL
 TARGET_DISABLE_EPPE := true
 TARGET_SHIPS_MATLOG := true
+WITH_GAPPS := true
+TARGET_CALL_RECORDING_SUPPORTED := true
+BLAZE_BUILD_TYPE := OFFICIAL
+BLAZE_MAINTAINER := BASUBHAJANTRI
+TARGET_SUPPORTS_BLUR := true
+TARGET_UDFPS_ANIMATIONS := true
 
 # Add Official Stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \

@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/awaken/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := awaken_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -52,3 +52,17 @@ TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Qualcomm Snapdragon SM8635" \
     RISING_MAINTAINER="BASUBHAJANTRI"
+
+
+USE_PIXEL_CHARGER := true
+SKIP_ABI_CHECKS := true
+HAS_FOD := true
+USE_GAPPS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+AWAKEN_BUILD_TYPE := official
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true

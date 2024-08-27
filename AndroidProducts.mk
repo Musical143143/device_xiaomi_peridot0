@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_peridot.mk
+    $(LOCAL_DIR)/orion_peridot.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    lineage_peridot-user \
-    lineage_peridot-userdebug \
-    lineage_peridot-eng
+    orion_peridot-user \
+    orion_peridot-userdebug \
+    orion_peridot-eng

@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/orion/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := orion_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -52,3 +52,13 @@ TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Qualcomm Snapdragon SM8635" \
     RISING_MAINTAINER="BASUBHAJANTRI"
+
+ORION_MAINTAINER := BASUBHAJANTRI
+ORION_MAINTAINER_LINK := < https://github.com/Musical143143>
+ORION_BUILD_TYPE := OFFICIAL
+ORION_GAPPS := true
+TARGET_ENABLE_BLUR := true
+
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true

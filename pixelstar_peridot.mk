@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := lineage_peridot
+PRODUCT_NAME := pixelstar_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -47,8 +47,22 @@ TARGET_SHIPS_MATLOG := true
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
 TARGET_PREBUILT_BCR := true
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+USE_PIXEL_CHARGER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_SUPPORTS_NOW_PLAYING := true
+TARGET_INCLUDE_CAMERA_GO := true
+TARGET_SUPPORTS_GOOGLE_BATTERY := true
+TARGET_SUPPORTS_CLEAR_CALLING := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_SUPPORTS_ADPATIVE_CHARGING := true
 
 # Add Official Stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Qualcomm Snapdragon SM8635" \
     RISING_MAINTAINER="BASUBHAJANTRI"
+
+TARGET_USES_BLUR_RECENT := true
+

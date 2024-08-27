@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_peridot.mk
+    $(LOCAL_DIR)/pixelstar_peridot.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    lineage_peridot-user \
-    lineage_peridot-userdebug \
-    lineage_peridot-eng
+    pixelstar_peridot-user \
+    pixelstar_peridot-userdebug \
+    pixelstar_peridot-eng

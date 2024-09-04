@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelstar_peridot.mk
+    $(LOCAL_DIR)/infinity_peridot.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    pixelstar_peridot-user \
-    pixelstar_peridot-userdebug \
-    pixelstar_peridot-eng
+    infinity_peridot-user \
+    infinity_peridot-userdebug \
+    infinity_peridot-eng

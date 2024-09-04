@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := pixelstar_peridot
+PRODUCT_NAME := infinity_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -37,6 +37,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 WITH_GMS := true
 TARGET_ENABLE_BLUR := true
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_IS_PIXEL := true
 TARGET_HAS_UDFPS := true
 TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_PREBUILT_PIXEL_LAUNCHER := true
@@ -65,4 +66,19 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_MAINTAINER="BASUBHAJANTRI"
 
 TARGET_USES_BLUR_RECENT := true
+
+INFINITY_BUILD_TYPE := OFFICIAL
+INFINITY_MAINTAINER := BASUBHAJANTRI
+TARGET_BUILD_VIMUSIC := true
+USE_MOTO_CALCULATOR := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+WITH_INFINITY_CHARGER := true
+TARGET_CALL_RECORDING_SUPPORTED := true
+TARGET_INCLUDES_POCKET_MODE := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+IS_OFFICIAL := true
+TARGET_BUILD_VIMUSIC := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
 

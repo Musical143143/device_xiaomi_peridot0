@@ -9,12 +9,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
+$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
 
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-PRODUCT_NAME := pixelstar_peridot
+PRODUCT_NAME := euclid_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
@@ -58,7 +58,14 @@ TARGET_SUPPORTS_CLEAR_CALLING := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_SUPPORTS_CALL_RECORDING := true
 TARGET_SUPPORTS_ADPATIVE_CHARGING := true
-
+EUCLID_BUILD_TYPE := OFFICIAL
+EUCLID_MAINTAINER := BASUBHAJANTRI
+EUCLID_GAPPS := true
+TARGET_INCLUDE_PIXEL_LAUNCHER := true
+TARGET_SUPPORTS_TOUCHGESTURES := true
+EXTRA_UDFPS_ANIMATIONS := true
+SystemUI_Clocks := true
+ 
 # Add Official Stuff
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RISING_CHIPSET="Qualcomm Snapdragon SM8635" \

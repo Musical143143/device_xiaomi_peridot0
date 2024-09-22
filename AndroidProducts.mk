@@ -5,10 +5,10 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelstar_peridot.mk
+    $(LOCAL_DIR)/euclid_peridot.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    pixelstar_peridot-user \
-    pixelstar_peridot-userdebug \
-    pixelstar_peridot-eng
+    euclid_peridot-user \
+    euclid_peridot-userdebug \
+    euclid_peridot-eng

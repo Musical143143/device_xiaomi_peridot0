@@ -9,7 +9,6 @@
 #include <fstream>
 
 #define TORCH_BRIGHTNESS "brightness"
-#define TORCH_MAX_BRIGHTNESS "max_brightness"
 #define TOGGLE_SWITCH "/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:switch_0/brightness"
 
 static std::string kTorchLedPath ="/sys/devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-03/1c40000.qcom,spmi:qcom,pmi632@3:qcom,leds@d300/leds/led:torch_0";

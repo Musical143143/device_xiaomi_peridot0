@@ -1,0 +1,63 @@
+#
+# Copyright (C) 2023 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+TARGET_SUPPORTS_OMX_SERVICE := false
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+
+# Inherit from laurel_sprout device
+$(call inherit-product, device/xiaomi/laurel_sprout/device.mk)
+
+# PixelOS props
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_AICORE := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_BOOT_ANIMATION_RES := 720
+WITH_GMS := true
+
+PRODUCT_DEVICE := laurel_sprout
+PRODUCT_NAME := infinity_laurel_sprout
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Mi A3
+PRODUCT_MANUFACTURER := xiaomi
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+BUILD_FINGERPRINT := Xiaomi/laurel_sprout/laurel_sprout:11/RKQ1.200903.002/V12.0.26.0.RFQMIXM:user/release-keys
+
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_PREBUILT_PIXEL_LAUNCHER := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+RISING_BUILDTYPE := OFFICIAL
+TARGET_DISABLE_EPPE := true
+TARGET_SHIPS_MATLOG := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_BCR := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+USE_PIXEL_CHARGER := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP  := true
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_SUPPORTS_NOW_PLAYING := true
+TARGET_INCLUDE_CAMERA_GO := true
+TARGET_SUPPORTS_GOOGLE_BATTERY := true
+TARGET_SUPPORTS_CLEAR_CALLING := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_CALL_RECORDING := true
+TARGET_SUPPORTS_ADPATIVE_CHARGING := true
+WITH_GAPPS := true
+TARGET_SUPPORTS_BLUR := true
+INFINITY_MAINTAINER := BASUBHAJANTRI
+INFINITY_BUILD_TYPE := OFFICIAL

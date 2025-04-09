@@ -330,3 +330,4 @@ $(call inherit-product, vendor/xiaomi/laurel_sprout/laurel_sprout-vendor.mk)
 
 # Inheirt signing files
 -include vendor/lineage-priv/keys/keys.mk
+$(call inherit-product, vendor/bcr/bcr.mk)

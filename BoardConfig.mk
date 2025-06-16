@@ -16,7 +16,7 @@ TARGET_OTA_ASSERT_DEVICE := OP5E93L1
 TARGET_SCREEN_DENSITY := 560
 
 # Kernel
-TARGET_KERNEL_CONFIG += vendor/oplus/avalon.config
+#TARGET_KERNEL_CONFIG += vendor/oplus/avalon.config
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

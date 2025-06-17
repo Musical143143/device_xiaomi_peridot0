@@ -17,6 +17,7 @@ TARGET_SCREEN_DENSITY := 560
 
 # Kernel
 #TARGET_KERNEL_CONFIG += vendor/oplus/avalon.config
+TARGET_KERNEL_CLANG_VERSION := r547379
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop

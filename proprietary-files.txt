@@ -147,14 +147,12 @@ odm/vendor/firmware/antdtx.b08
 odm/vendor/firmware/antdtx.mdt
 
 # Audio
-vendor/bin/qsap_voiceui
 vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/models/vui/sm8_gr1UsPdk6XsMfcn220819Enpu4FloateAIv34.uim
 vendor/etc/models/vui/sm8_gr3UsMFCN230612eAIv34ENPUv4Float.uim
-vendor/etc/seccomp_policy/qsap_voiceui.policy
 vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -179,8 +177,6 @@ vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libmcs.so;DISABLE_CHECKELF
 vendor/lib64/libqtigefar.so
 vendor/lib64/libtensorflowlite_c.so
-vendor/lib64/libvui_dmgr.so
-vendor/lib64/libvui_dmgr_client.so
 vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
@@ -2135,16 +2131,13 @@ vendor/bin/engine-service
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
-vendor/bin/qsap_location
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
-vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -2549,9 +2542,7 @@ vendor/bin/hw/pasrknob
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
 vendor/bin/poweropt-service
-vendor/bin/qsap_qapeservice
 vendor/etc/init/poweropt-service.rc
-vendor/etc/init/vendor.qsap.qapeservice.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc
 vendor/etc/init/vendor.qti.pasrknob@1.0-service.rc
@@ -2587,7 +2578,6 @@ vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
-vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
 vendor/etc/smomo_setting.xml
@@ -2815,10 +2805,8 @@ vendor/bin/hw/qcrilNrd
 vendor/bin/ks
 vendor/bin/nicmd
 vendor/bin/qms
-vendor/bin/qsap_dcfd
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
-vendor/etc/init/dcfd.rc
 vendor/etc/init/nicmd.rc
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/qms.rc
@@ -2851,7 +2839,6 @@ vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.s
 vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/seccomp_policy/qms.policy
-vendor/etc/seccomp_policy/qsap_dcfd.policy
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
@@ -3043,18 +3030,14 @@ odm/bin/oplus_sensor_ssr
 odm/lib64/liboplus_service.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
-vendor/bin/qsap_sensors
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
-vendor/etc/init/vendor.qsap.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
-vendor/etc/seccomp_policy/qsap_sensors.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
-vendor/lib64/libSensorsInterface.so
 vendor/lib64/libcwb_client_vendor.so
 vendor/lib64/libqsh.so
 vendor/lib64/libsensor_calibration.so

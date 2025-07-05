@@ -134,6 +134,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+# Dolby
+$(call inherit-product, hardware/dolby/dolby.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -431,6 +434,7 @@ PRODUCT_COPY_FILES += \
 
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    hardware/dolby/configs/vintf/dolby_framework_matrix.xml \
     hardware/oplus/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
@@ -440,7 +444,9 @@ DEVICE_MANIFEST_FILE := \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa.xml \
     $(AUDIO_HAL_DIR)/configs/common/manifest_non_qmaa_extn.xml \
     $(LOCAL_PATH)/manifest_cliffs.xml \
-    $(LOCAL_PATH)/network_manifest.xml
+    $(LOCAL_PATH)/network_manifest.xml \
+    hardware/dolby/configs/vintf/vendor.dolby.hardware.dms@2.0-service.xml \
+    hardware/dolby/configs/vintf/vendor.dolby.media.c2@1.0-service.xml
 
 ODM_MANIFEST_FILES := \
     $(LOCAL_PATH)/network_manifest_odm.xml

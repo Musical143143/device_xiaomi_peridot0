@@ -2384,7 +2384,6 @@ vendor/etc/vintf/manifest/c2_manifest_vendor.xml
 vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.qconfig-service.xml
 vendor/etc/media_codecs_cliffs_v0.xml
-vendor/etc/media_codecs_cliffs_v1.xml
 vendor/etc/media_codecs_performance_cliffs_v0.xml
 vendor/etc/media_codecs_performance_cliffs_v1.xml
 vendor/etc/media_codecs_performance_pineapple.xml

@@ -11,10 +11,9 @@
 
 #include <fs_mgr.h>
 
-#define NV_ID_IN "27"
-#define NV_ID_EU "68"
-#define NV_ID_CN "151"
-#define NV_ID_US "161"
+#define NV_ID_IN  "27"
+#define NV_ID_EU  "68"
+#define NV_ID_ROW "167"
 
 using android::base::GetProperty;
 using android::fs_mgr::GetKernelCmdline;
@@ -56,10 +55,7 @@ void vendor_load_properties() {
     auto hw_region_id = GetKernelCmdlineParam("oplus_region");
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
 
-    if (hw_region_id == NV_ID_CN) {
-        OverrideProperty("ro.boot.hardware.revision", "CN");
-        OverrideProperty("ro.vendor.oplus.regionmark", "CN");
-    } else if (hw_region_id == NV_ID_EU) {
+    if (hw_region_id == NV_ID_EU) {
         OverrideProperty("ro.boot.hardware.revision", "EU");
         OverrideProperty("ro.vendor.oplus.regionmark", "EUEX");
         OverrideProperty("ro.vendor.oplus.radio.sar_regionmark", "EUEX");
@@ -67,8 +63,10 @@ void vendor_load_properties() {
         OverrideProperty("ro.boot.hardware.revision", "IN");
         OverrideProperty("ro.vendor.oplus.regionmark", "IN");
         OverrideProperty("ro.vendor.oplus.radio.sar_regionmark", "IN");
-    } else if (hw_region_id == NV_ID_US) {
-        OverrideProperty("ro.boot.hardware.revision", "NA");
+    } else if (hw_region_id == NV_ID_ROW) {
+        OverrideProperty("ro.boot.hardware.revision", "ROW");
+        OverrideProperty("ro.vendor.oplus.regionmark", "ROW");
+        OverrideProperty("ro.vendor.oplus.radio.sar_regionmark", "EUEX");
     } else {
         LOG(ERROR) << "Unexpected region ID: " << hw_region_id;
     }
@@ -76,18 +74,15 @@ void vendor_load_properties() {
     const char *device = nullptr, *model = nullptr, *name = nullptr;
 
     switch (prjname) {
-        case 22825:  // waffle CN
-            device = "OP5929L1";
-            model = name = "PJD110";
-            break;
-        case 22877:  // waffle ROW
+        case 24211:  // avalon
             if (hw_region_id == NV_ID_EU) {
-                name = "CPH2581EEA";
+                model = "CPH2663";
+                name = "CPH2663EEA";
             } else if (hw_region_id == NV_ID_IN) {
-                model = "CPH2573";
-                name = "CPH2573IN";
-            } else if (hw_region_id == NV_ID_US) {
-                model = name = "CPH2583";
+                model = "CPH2661";
+                name = "CPH2661IN";
+            } else if (hw_region_id == NV_ID_ROW) {
+                model = name = "CPH2663";
             }
             break;
         default:

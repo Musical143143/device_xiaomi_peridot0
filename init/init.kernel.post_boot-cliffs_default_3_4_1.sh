@@ -90,6 +90,7 @@ if [ -d /proc/sys/walt ]; then
 	echo 100 > /proc/sys/walt/sched_group_upmigrate
 	echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
 	echo 51 > /proc/sys/walt/sched_min_task_util_for_boost
+	echo 35 > /proc/sys/walt/sched_min_task_util_for_colocation
 	echo 20000000 > /proc/sys/walt/sched_coloc_downmigrate_ns
 	echo 0 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
 	echo 8500000 8500000 8500000 5000000 5000000 5000000 5000000 2000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
@@ -154,27 +155,6 @@ if [ -d /proc/sys/walt ]; then
 	echo 85 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_load
 	echo 85 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_load
 
-	# switch to uag gov after walt gov parameter setting, for proper switch back to walt gov
-	#echo "uag" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-	#echo "uag" > /sys/devices/system/cpu/cpufreq/policy3/scaling_governor
-        #echo "uag" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-
-	#echo 1000 > /sys/devices/system/cpu/cpufreq/policy0/uag/down_rate_limit_us
-	#echo 10 > /sys/devices/system/cpu/cpufreq/policy0/uag/up_rate_limit_us
-	#echo 10 > /sys/devices/system/cpu/cpufreq/policy3/uag/down_rate_limit_us
-	#echo 10 > /sys/devices/system/cpu/cpufreq/policy3/uag/up_rate_limit_us
-	#echo 10 > /sys/devices/system/cpu/cpufreq/policy7/uag/down_rate_limit_us
-	#echo 10 > /sys/devices/system/cpu/cpufreq/policy7/uag/up_rate_limit_us
-
-	if [ $rev == "1.0" ] || [ $rev == "1.1" ]; then
-		echo 1324800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-		echo 1555200 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
-		echo 1593600 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
-	else
-		echo 1344000 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
-		echo 1536000 > /sys/devices/system/cpu/cpufreq/policy3/walt/hispeed_freq
-		echo 1708800 > /sys/devices/system/cpu/cpufreq/policy7/walt/hispeed_freq
-	fi
 else
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 	echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy3/scaling_governor
@@ -282,15 +262,5 @@ case "$console_config" in
 		echo "Enable console config to $console_config"
 	;;
 esac
-
-#config fg and top cpu shares
-echo 5120 > /dev/cpuctl/top-app/cpu.shares
-echo 4096 > /dev/cpuctl/foreground/cpu.shares
-
-#config sstop cpu shares
-echo 2048 > /dev/cpuctl/sstop/cpu.shares
-
-#config general cpu shares
-echo 2048 > /dev/cpuctl/general/cpu.shares
 
 setprop vendor.post_boot.parsed 1

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Delay in ms before invoking single tap gesture
+         Should be set to dt2w max time / 2 when needed -->
+    <integer name="config_singleTapDelay">250</integer>
+
+</resources>

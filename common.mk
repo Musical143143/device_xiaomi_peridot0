@@ -200,7 +200,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     fstab.qcom.vendor_ramdisk \
     init.class_main.sh \
-    init.kernel.post_boot-cliffs.sh \
+#    init.kernel.post_boot-cliffs.sh \
     init.kernel.post_boot-cliffs_default_3_4_1.sh \
     init.oplus.rc \
     init.kernel.post_boot.sh \

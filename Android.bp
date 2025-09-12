@@ -27,9 +27,9 @@ install_symlink {
     symlink_target: "/odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
 
-install_symlink {
-    name: "media_profiles_symlink",
-    vendor: true,
-    installed_location: "etc/media_profiles_cliffs_v1.xml",
-    symlink_target: "/odm/etc/camera/media_profiles.xml",
-}
+//install_symlink {
+//    name: "media_profiles_symlink",
+//    vendor: true,
+//    installed_location: "etc/media_profiles_cliffs_v1.xml",
+//    symlink_target: "/odm/etc/camera/media_profiles.xml",
+//}

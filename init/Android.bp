@@ -75,11 +75,11 @@ sh_binary {
     vendor: true,
 }
 
-sh_binary {
-    name: "init.kernel.post_boot-cliffs.sh",
-    src: "init.kernel.post_boot-cliffs.sh",
-    vendor: true,
-}
+//sh_binary {
+//    name: "init.kernel.post_boot-cliffs.sh",
+//    src: "init.kernel.post_boot-cliffs.sh",
+//    vendor: true,
+//}
 
 sh_binary {
     name: "init.kernel.post_boot-cliffs_default_3_4_1.sh",

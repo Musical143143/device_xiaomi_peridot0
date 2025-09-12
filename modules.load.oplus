@@ -1,6 +1,8 @@
 aw8697.ko
 haptic_feedback.ko
 haptic.ko
+oplus_bsp_pogo_keyboard.ko
+thermal_pa_adc.ko
 oplus_ak09970.ko
 oplus_audio_aw882xx.ko
 oplus_audio_extend.ko

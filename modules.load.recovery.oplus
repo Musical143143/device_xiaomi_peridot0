@@ -4,6 +4,7 @@ buildvariant.ko
 haptic_feedback.ko
 haptic.ko
 kernel_fb.ko
+oplus_bsp_pogo_keyboard.ko
 olc.ko
 oplus_ak09970.ko
 oplusboot.ko
@@ -37,4 +38,5 @@ oplus_sensor_interact.ko
 oplus_sensor_ir_core.ko
 oplus_sensor_kookong_ir_spi.ko
 oplus_wireless_pen.ko
+thermal_pa_adc.ko
 test-kit.ko

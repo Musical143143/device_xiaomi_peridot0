@@ -1,0 +1,22 @@
+ # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ # All rights reserved.
+ # Confidential and Proprietary - Qualcomm Technologies, Inc.
+
+service vendor.hexpservice /vendor/bin/hexlpservice
+    class hal
+    user media
+    group camera system
+
+    # AIDL interface
+    interface aidl vendor.qti.hardware.hexlp.IHexlpService/default
+
+    # don't auto restart
+    oneshot
+
+    # start only when requested (uncomment below to disable service at boot)
+    # #ifndef OPLUS_BUG_COMPATIBILITY
+    # // Guanbiao.Liu@MULTIMEDIA.MMSERVER.PLAYER,7657076, 2024/07/30, disable hexlpservice at boot on SM8650(hexlp.la.1.0.r1)
+    # disabled
+    # #else /* OPLUS_BUG_COMPATIBILITY */
+    disabled
+    # #endif /* OPLUS_BUG_COMPATIBILITY */

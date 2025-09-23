@@ -1,0 +1,33 @@
+
+on post-fs-data
+      mkdir /data/vendor/qms 0700 radio radio
+      mkdir /data/vendor/qms_logs 0700 radio radio
+      mkdir /data/vendor/qms_logs/main 0700 radio radio
+      mkdir /data/vendor/qms_logs/other 0700 radio radio
+      mkdir /data/vendor/qms_logs/config 0700 radio radio
+
+on property:sys.boot_completed=1
+    rm /mnt/vendor/persist/data/pfm/licenses/2023-07-13_O_SNS_platform_license.pfm.inst
+    rm /mnt/vendor/persist/data/pfm/licenses/2023-07-14-O-SDA_platform_license.pfm.inst
+    copy /vendor/etc/SNS_platform_license.pfm /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license.pfm
+    chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license.pfm
+    copy /vendor/etc/SDA_platform_license.pfm /mnt/vendor/persist/data/pfm/licenses/SDA_platform_license.pfm
+    chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SDA_platform_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/SDA_platform_license.pfm
+
+    # DuYuanhua@NETWORK.DATA.6896217, 2024/02/06, Add specific SNS license for SM7675
+    copy /vendor/etc/SNS_platform_license_for_SM7675.pfm /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM7675.pfm
+    chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM7675.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM7675.pfm
+
+    # YuanXuwu@NETWORK.DATA.6924458, 2024/03/04, Add specific SNS license for SM8635
+    copy /vendor/etc/SNS_platform_license_for_SM8635.pfm /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM8635.pfm
+    chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM8635.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM8635.pfm
+
+service vendor.qms /vendor/bin/qms
+     class main
+     user radio
+     group radio wakelock wifi inet net_admin
+     capabilities BLOCK_SUSPEND NET_ADMIN

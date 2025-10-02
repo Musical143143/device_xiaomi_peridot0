@@ -12,6 +12,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/init.oplus.sensor.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.oplus.sensor.rc \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/init.oppo.reserve.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.oppo.reserve.rc \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/init.touchDaemon.rc:$(TARGET_COPY_OUT_ODM)/etc/init/init.touchDaemon.rc \
+    vendor/oneplus/sm8650-common/proprietary/odm/etc/init/vendor-oplus-hardware-performance-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-performance-V1-service.rc \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor-oplus-hardware-touch-V2-service.rc \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.charger-V6-service.rc \
     vendor/oneplus/sm8650-common/proprietary/odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc \
@@ -983,6 +984,7 @@ PRODUCT_PACKAGES += \
     libuahcore \
     vendor.oplus.hardware.olc2-V1-ndk \
     vendor.oplus.hardware.olc2-V2-ndk \
+    vendor.oplus.hardware.performance-V3-ndk \
     vendor.oplus.hardware.stability.oplus_project-V2-ndk \
     libQnnHtpV75Skel.aiboost \
     libaiboostubwc_skel.aiboost \
@@ -1048,6 +1050,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-service.xml \
     manifest_oplus_charger_aidl.xml \
     manifest_oplus_stability_project_aidl.xml \
+    manifest_performance_aidl.xml \
     manifest_touch_aidl.xml \
     ATFWD-daemon \
     adpl \
@@ -1150,6 +1153,7 @@ PRODUCT_PACKAGES += \
     qccsyshal_aidl-service \
     tcmd \
     wfdservice64 \
+    vendor-oplus-hardware-performance-V1-service \
     vendor-oplus-hardware-touch-V2-service \
     vendor.oplus.hardware.charger-V6-service \
     vendor.oplus.hardware.stability.oplus_project-V1-service \
@@ -1477,7 +1481,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.ims.datachannelservice-V2-ndk \
     vendor.qti.imsrtpservice@3.0 \
     vendor.qti.imsrtpservice@3.1 \
-    android.hardware.secure_element-V1-ndk_odm \
     lib-virtual-modem-protos \
     libclstc_fod_color \
     libcommcenterfw \

@@ -5,6 +5,7 @@
 #
 
 COMMON_PATH := device/oneplus/sm7675-common
+SKIP_ABI_CHECKS := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -76,6 +77,10 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
+
+# FCM
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    vendor/cherish/config/device_framework_matrix.xml
 
 # Kernel
 BOARD_BOOTCONFIG := \
@@ -171,7 +176,7 @@ BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
 BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
--include vendor/lineage/config/BoardConfigReservedSize.mk
+-include vendor/cherish/config/BoardConfigReservedSize.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 201326592
 BOARD_DTBOIMG_PARTITION_SIZE := 25165824
 BOARD_INIT_BOOT_IMAGE_PARTITION_SIZE := 8388608

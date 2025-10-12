@@ -456,10 +456,12 @@ cc_prebuilt_library_shared {
                 "android.hidl.memory@1.0",
                 "libhidlmemory",
                 "libbinder_ndk",
+                "liblx-osal",
                 "libtinyalsa",
                 "libdiag",
                 "vendor.qti.hardware.pal@1.0-impl",
                 "vendor.qti.hardware.pal@1.0",
+                "vendor.qti.hardware.AGMIPC@1.0-impl",
                 "vendor.qti.hardware.AGMIPC@1.0",
                 "libagm",
                 "libc++",
@@ -470,7 +472,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     relative_install_path: "hw",
     prefer: true,
     soc_specific: true,
@@ -1955,8 +1956,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libagm.so",
             ],
             shared_libs: [
+                "libar-gsl",
                 "liblog",
+                "liblx-osal",
                 "libaudioroute",
+                "libats",
                 "libarmemlog",
                 "libcutils",
                 "libdiag",
@@ -1971,7 +1975,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -2094,11 +2097,14 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libar-pal.so",
             ],
             shared_libs: [
+                "libar-gsl",
                 "liblog",
                 "libexpat",
+                "liblx-osal",
                 "libaudioroute",
                 "libcutils",
                 "libutilscallstack",
+                "libagmclient",
                 "libvui_intf",
                 "libarmemlog",
                 "libhidlbase",
@@ -2115,7 +2121,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -2134,6 +2139,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libexpat",
+                "liblx-osal",
                 "libc++",
                 "libc",
                 "libm",
@@ -2142,7 +2148,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -3990,9 +3995,12 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libagm",
                 "libaudioroute",
+                "libar-acdb",
                 "liblog",
                 "libcutils",
+                "libats",
                 "libexpat",
+                "liblx-osal",
                 "libtinyalsa",
                 "libc++",
                 "libc",
@@ -4002,7 +4010,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -5889,6 +5896,7 @@ cc_prebuilt_library_shared {
                 "libqc2audio_basecodec",
                 "libcodec2_vndk",
                 "libstagefright_foundation",
+                "libpalclient",
                 "libc++",
                 "libc",
                 "libm",
@@ -5897,7 +5905,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -9505,33 +9512,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libvui_intf",
-    owner: "oneplus",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libvui_intf.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }

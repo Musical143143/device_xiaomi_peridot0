@@ -739,7 +739,6 @@ PRODUCT_PACKAGES += \
     libvpplibrary \
     libvui_dmgr \
     libvui_dmgr_client \
-    libvui_intf \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \

@@ -5,7 +5,7 @@
 #
 
 # Signing Keys
-include vendor/lineage-priv/keys/keys.mk
+-include vendor/lineage-priv/keys/keys.mk
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal

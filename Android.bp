@@ -144,6 +144,14 @@ android_library {
         "tflite_support_java",
         "tensorflow-lite-gpu",
         "tensorflow-lite-gpu-api",
+        "androidx.room_room-runtime",
+        "androidx.fragment_fragment",
+        "androidx.fragment_fragment-ktx",
+        "androidx.preference_preference-ktx",
+        "kotlin-stdlib",
+        "kotlinx_coroutines_android",
+        "kotlinx_coroutines",
+        "blurview",
     ],
 
     plugins: [
@@ -229,4 +237,20 @@ android_library_import {
 filegroup {
     name: "Settings_proguard_flags",
     srcs: ["proguard.flags"],
+}
+}
+
+filegroup {
+    name: "Settings_manifest",
+    srcs: ["AndroidManifest.xml"],
+}
+
+android_library_import {
+    name: "glide",
+    aars: ["libs/glide-4.16.0.aar"],
+}
+
+android_library_import {
+    name: "blurview",
+    aars: ["libs/BlurView-3.2.0.aar"],
 }

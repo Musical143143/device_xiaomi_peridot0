@@ -67,5 +67,11 @@
         android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
         android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
         android:visibility="gone"/>
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <include layout="@layout/search_bar"/>
 
 </LinearLayout>

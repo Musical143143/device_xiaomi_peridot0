@@ -171,6 +171,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <AppLayer  name="SurfaceView[com.benqu.wuta/com.benqu.wuta.activities.preview.PreviewActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
       </LayerApp>
 
+      <LayerApp name="timestampcamerafree">
+        <AppLayer  name="SurfaceView[com.jeyluta.timestampcamerafree/com.android.grafika.CameraCaptureActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
+      </LayerApp>
+
       <LayerApp name="Shuiyin">
         <AppLayer  name="SurfaceView[com.tencent.zebra/com.android.camera.CameraActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
       </LayerApp>

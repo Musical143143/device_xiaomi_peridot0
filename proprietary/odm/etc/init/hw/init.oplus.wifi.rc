@@ -85,6 +85,9 @@ on property:sys.usb.config=diag,adb && property:sys.usb.configfs=1
     start wifitestdiag
 #endif /* OPLUS_FEATURE_WIFI_DIAG */
 
+on property:sys.boot_completed=1
+    setprop persist.vendor.oplus.first.boot "no"
+
 # ifdef OPLUS_FEATURE_WIFI_INI_ROMUPDATE
 # YangJiang@CONNECTIVITY.WIFI.NETWORK.2132185, 2021/09/13
 # To rename ini_temp.txt into WCNSS_qcom_cfg.ini

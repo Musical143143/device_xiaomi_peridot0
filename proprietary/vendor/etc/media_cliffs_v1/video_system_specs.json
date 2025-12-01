@@ -59,7 +59,8 @@
             // dump location, if not set, will use default location
             // dump location like /data/vendor/media/qc2/, absolute path
             // max dump location length should less than 128 bytes.
-            "dump_location": 0
+            "dump_location": 0,
+            "default_primaries_override" : 1
         },
 
         "ProsightModeBitrateTable": [

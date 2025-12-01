@@ -21,6 +21,11 @@ on property:sys.boot_completed=1
     chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM7675.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM7675.pfm
 
+    # LiuYuzheng@NETWORK.DATA.8657104, 2025/01/22, Add trial SNS license for SM8635
+    copy /vendor/etc/SNS_trial_no_secure_license_for_SM8635.pfm /mnt/vendor/persist/data/pfm/licenses/SNS_trial_no_secure_license_for_SM8635.pfm
+    chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_trial_no_secure_license_for_SM8635.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/SNS_trial_no_secure_license_for_SM8635.pfm
+
     # YuanXuwu@NETWORK.DATA.6924458, 2024/03/04, Add specific SNS license for SM8635
     copy /vendor/etc/SNS_platform_license_for_SM8635.pfm /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM8635.pfm
     chmod 0644 /mnt/vendor/persist/data/pfm/licenses/SNS_platform_license_for_SM8635.pfm

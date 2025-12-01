@@ -37,7 +37,13 @@
             //  0x1: 8 bit: enable.  10 bit: disable
             //  0x2: 8 bit: disable. 10 bit: enable
             //  0x3: 8 bit: enable.  10 bit: enable
-            "enc_bitrate_savings": 3,
+            //#ifndef OPLUS_BUG_COMPATIBILITY
+            //Yuxuan.Zhang@MULTIMEDIA.MEDIASERVER.RECORD,2025/03/19,
+            //fix 8635 encoding bitrate much lower than 8650 issue
+            //"enc_bitrate_savings": 3,
+            //#else /*OPLUS_BUG_COMPATIBILITY*/
+            "enc_bitrate_savings": 0,
+            //#endif /*OPLUS_BUG_COMPATIBILITY*/
             // max input work count, max output work done in one dump file
             // if frame count in dump file is larger than max work count,
             // will dump in a new file

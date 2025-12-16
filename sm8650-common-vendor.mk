@@ -849,6 +849,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccsyshal_aidl-service.xml \
     manifest_oplus_charger_aidl.xml \
     manifest_touch_aidl.xml \
+    KmInstallKeybox \
     adsprpcd \
     audioadsprpcd \
     cdsprpcd \

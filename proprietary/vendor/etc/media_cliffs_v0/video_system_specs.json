@@ -65,7 +65,14 @@
             // dump location, if not set, will use default location
             // dump location like /data/vendor/media/qc2/, absolute path
             // max dump location length should less than 128 bytes.
-            "dump_location": 0
+            "dump_location": 0,
+            // #ifndef OPLUS_BUG_COMPATIBILITY
+            // SunQinhua@MULTIMEDIA.MEDIASERVER.PLAYER, output 4K video without color info as BT.709
+            // override default primaries to BT709 for >=UHD decode
+            // "default_primaries_override" : 0
+            //#else /*OPLUS_BUG_COMPATIBILITY*/
+            "default_primaries_override" : 1
+            // #endif OPLUS_BUG_COMPATIBILITY
         },
 
         "ProsightModeBitrateTable": [

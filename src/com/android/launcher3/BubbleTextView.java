@@ -322,7 +322,7 @@ public class BubbleTextView extends TextView implements ItemInfoUpdateReceiver,
         } else {
             // widget_selection or shortcut_popup
             defaultIconSize = mDeviceProfile.getWorkspaceIconProfile().getIconSizePx();
-            mShouldShowLabel = SHOW_DESKTOP_LABELS.get(context);
+            mShouldShowLabel = true;
         }
 
 

@@ -141,6 +141,10 @@ PRODUCT_COPY_FILES += \
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# Dolby Permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-dolby.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-dolby.xml
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

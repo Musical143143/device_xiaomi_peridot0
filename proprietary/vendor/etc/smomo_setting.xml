@@ -155,6 +155,10 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         <AppLayer  name="SurfaceView[com.tencent.mobileqq/com.tencent.aelight.camera.ae.flashshow.WinkHomeActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
       </LayerApp>
 
+      <LayerApp name="QQxuanWu">
+        <AppLayer  name="SurfaceView[com.tencent.tmgp.qqx5/com.tencent.tmgp.qqx5.DGMMainActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
+      </LayerApp>
+
       <LayerApp name="Gorgeous">
         <AppLayer  name="SurfaceView[com.gorgeous.liteinternational/com.light.beauty.mainpage.MainActivity](BLAST)" type="camera" strategy="mode" mode="2" enable="true"/>
       </LayerApp>

@@ -20,7 +20,7 @@
 
     <!-- The number of thumbnails and icons to keep in the cache. The thumbnail cache size also
          determines how many thumbnails will be fetched in the background. -->
-    <integer name="recentsThumbnailCacheSize">3</integer>
+    <integer name="recentsThumbnailCacheSize">6</integer>
     <integer name="recentsIconCacheSize">12</integer>
     <integer name="recentsScrollHapticMinGapMillis">20</integer>
 
@@ -30,8 +30,8 @@
 
     <string name="wellbeing_provider_pkg" translatable="false"/>
 
-    <integer name="max_depth_blur_radius">23</integer>
-    <dimen name="max_depth_blur_radius_enhanced">30dp</dimen>
+    <integer name="max_depth_blur_radius">11</integer>
+    <dimen name="max_depth_blur_radius_enhanced">15dp</dimen>
 
     <!-- If predicted widgets from prediction service are less than this number, additional
     eligible widgets may be added locally by launcher. When set to 0, no widgets will be added

@@ -266,7 +266,7 @@
         <item name="colorScIconWarn">@color/sc_icon_warn_light</item>
         <item name="colorScShieldAccent">@color/sc_shield_accent_light</item>
     </style>
-
+<string name="double_tap_power_torch_action_title">Flashlight</string>
     <style name="ThemeOverlay.SafetyCenterColors"
         parent="ThemeOverlay.SafetyCenterColors.Light" />
 </resources>

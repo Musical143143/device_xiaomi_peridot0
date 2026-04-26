@@ -5,9 +5,9 @@
 soong_namespace {
     imports: [
         "device/oneplus/sm8650-common",
+        "hardware/oplus",
         "hardware/qcom-caf/sm8650",
         "hardware/qcom-caf/wlan",
-        "hardware/oplus",
         "vendor/qcom/opensource/commonsys/display",
         "vendor/qcom/opensource/commonsys-intf/display",
         "vendor/qcom/opensource/dataservices",

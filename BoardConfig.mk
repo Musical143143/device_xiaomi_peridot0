@@ -34,3 +34,5 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/avalon/BoardConfigVendor.mk
+
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/avalon/sepolicy

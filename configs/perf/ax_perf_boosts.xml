@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AxBurstEngine Boost Rules Configuration -->
+<boosts>
+    <!-- High Performance Profile Configuration -->
+    <boost-resource id="0x01fd" name="max_perf_boost">
+        <set resource="cpu_big_min" id="0x0003" value="2600000" />
+        <set resource="cpu_prime_min" id="0x0005" value="2800000" />
+        <set resource="uclamp_top_min" id="0x0010" value="70" />
+    </boost-resource>
+
+    <!-- Scroll Optimization Profile Configuration -->
+    <boost-resource id="0x01fe" name="scroll_fling_boost">
+        <set resource="cpu_little_min" id="0x0001" value="1400000" />
+        <set resource="cpu_big_min" id="0x0003" value="1800000" />
+        <set resource="uclamp_top_min" id="0x0010" value="40" />
+    </boost-resource>
+
+    <!-- Opcode 1: App Launch Boost (Triggered on cold start intents) -->
+    <boost opcode="1" timeout_ms="2500" name="app_launch_hint">
+        <set resource="max_perf_boost" id="0x01fd" />
+    </boost>
+
+    <!-- Opcode 2: UI Touch Interactions / Flinging Layout Tracking -->
+    <boost opcode="2" timeout_ms="1200" name="scroll_interaction_hint">
+        <set resource="scroll_fling_boost" id="0x01fe" />
+    </boost>
+</boosts>

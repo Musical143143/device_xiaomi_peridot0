@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Advanced Thermal Mitigation (ATMC) Configuration for Avalon -->
+<perf-config>
+    <atmc>
+        <!-- CPU Scaling Steps per Thermal State (MHz converted to kHz by the framework) -->
+        <!-- Format matches cluster assignments: little, big, prime -->
+        <cpu_levels>
+            <!-- State 0: Normal / Safe Temperatures (<39°C) -->
+            <level index="0" little="1900" big="2600" prime="2800" />
+            <!-- State 1: Light Warning (40°C - 42°C) - Drop Prime to prevent rapid climb -->
+            <level index="1" little="1900" big="2600" prime="2500" />
+            <!-- State 2: Heavy Warning (43°C - 45°C) - Scale Big down to maintain stability -->
+            <level index="2" little="1600" big="2100" prime="2100" />
+            <!-- State 3: Critical / Emergency (46°C+) - Aggressive step down to save hardware -->
+            <level index="3" little="1200" big="1400" prime="1400" />
+        </cpu_levels>
+
+        <!-- GPU Target Frequencies mapped per operational indices (MHz layout) -->
+        <gpu_levels>
+            <level index="0" min="305" max="950" />
+            <level index="1" min="305" max="800" />
+            <level index="2" min="305" max="615" />
+            <level index="3" min="305" max="430" />
+        </gpu_levels>
+
+        <!-- Scenario Boost Rules: Prevents UI stutter during background operations -->
+        <boost_scenarios>
+            <scenario name="gaming" thermal_limit_index="2" fps_target="120" />
+            <scenario name="camera_recording" thermal_limit_index="1" buffer_rate="60" />
+            <scenario name="dexopt_background" thermal_limit_index="3" background_killer="true" />
+        </boost_scenarios>
+    </atmc>
+</perf-config>

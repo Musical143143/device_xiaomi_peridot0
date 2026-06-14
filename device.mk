@@ -78,3 +78,11 @@ $(call inherit-product, device/oneplus/sm8650-common/common.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/avalon/avalon-vendor.mk)
+
+
+# AxBurstEngine Custom Profile Layout Configuration Copies
+PRODUCT_COPY_FILES += \
+    device/oneplus/avalon/configs/perf/ax_perf_resources.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_resources.xml \
+    device/oneplus/avalon/configs/perf/ax_perf_boosts.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_boosts.xml \
+    device/oneplus/avalon/configs/perf/ax_perf_thermal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_thermal.xml \
+    device/oneplus/avalon/configs/perf/ax_perf_threads.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_perf_threads.xml

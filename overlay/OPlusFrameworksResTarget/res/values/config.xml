@@ -284,6 +284,16 @@
     <integer name="config_stableDeviceDisplayWidth">1240</integer>
     <integer name="config_stableDeviceDisplayHeight">2772</integer>
 
+
+    <!-- Path to the charging bypass/input suspend sysfs node -->
+    <string name="config_bypassChargingNode">/sys/class/power_supply/battery/input_suspend</string>
+
+    <!-- Hardcoded state variables for PMIC charging pause execution -->
+    <string name="config_bypassChargingEnableValue">1</string>
+    <string name="config_bypassChargingDisableValue">0</string>
+
+
+
     <!-- A string config in svg path format for the main display shape.
          (@see https://www.w3.org/TR/SVG/paths.html#PathData).
 

@@ -93,6 +93,11 @@
     <dimen name="multiple_users_user_icon_size">40dp</dimen>
 
     <!-- Homepage -->
+    <dimen name="homepage_title_margin_top">16dp</dimen>
+    <dimen name="card_highlight_margin_start">16dp</dimen>
+    <dimen name="card_highlight_margin_end">16dp</dimen>
+    <dimen name="custom_avatar_length">40dp</dimen>
+    <dimen name="avatar_margin_end">16dp</dimen>
     <dimen name="homepage_title_margin_bottom">8dp</dimen>
     <dimen name="homepage_title_margin_horizontal">24dp</dimen>
     <dimen name="homepage_preference_min_height">88sp</dimen>

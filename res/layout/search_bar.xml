@@ -32,34 +32,32 @@
         android:layout_height="wrap_content"
         android:layout_weight="1">
 
-    <eightbitlab.com.blurview.BlurView
-        android:id="@+id/search_bar_blur"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.8"
-        android:layout_marginEnd="8dp"
-        app:blurOverlayColor="#66FFFFFF">
-        <Toolbar
-            android:id="@+id/search_action_bar"
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/search_bar_blur"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/search_bar_height"
-            android:minHeight="@dimen/search_bar_height"
-            android:paddingStart="@dimen/search_bar_padding_start"
-            android:paddingEnd="@dimen/search_bar_padding_end"
-            android:background="@drawable/search_bar_selected_background"
-            android:background="@android:color/transparent"
-            android:touchscreenBlocksFocus="false"
-            android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"
-            android:navigationIcon="@drawable/ic_homepage_search">
-            <TextView
-                android:id="@+id/search_action_bar_title"
-                style="@style/TextAppearance.SearchBar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="@dimen/search_bar_title_padding_start"
-                android:layout_gravity="center_vertical"
-                android:text="@string/homepage_search"/>
-        </Toolbar>
+            android:layout_height="wrap_content"
+            app:blurOverlayColor="#66FFFFFF">
+            <Toolbar
+                android:id="@+id/search_action_bar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_bar_height"
+                android:minHeight="@dimen/search_bar_height"
+                android:paddingStart="@dimen/search_bar_padding_start"
+                android:paddingEnd="@dimen/search_bar_padding_end"
+                android:background="@android:color/transparent"
+                android:touchscreenBlocksFocus="false"
+                android:contentInsetStartWithNavigation="@dimen/search_bar_content_inset"
+                android:navigationIcon="@drawable/ic_homepage_search">
+                <TextView
+                    android:id="@+id/search_action_bar_title"
+                    style="@style/TextAppearance.SearchBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/search_bar_title_padding_start"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/homepage_search"/>
+            </Toolbar>
+        </eightbitlab.com.blurview.BlurView>
     </com.google.android.material.card.MaterialCardView>
 
     <LinearLayout
@@ -77,5 +75,4 @@
             android:visibility="invisible"
             android:contentDescription="@string/search_bar_account_avatar_content_description" />
     </LinearLayout>
-    </eightbitlab.com.blurview.BlurView>
 </LinearLayout>

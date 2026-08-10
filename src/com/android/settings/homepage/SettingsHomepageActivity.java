@@ -466,60 +466,30 @@ public class SettingsHomepageActivity extends FragmentActivity implements
 
     private void initSearchBarView() {
         View toolbar = findViewById(R.id.search_action_bar);
+
+        // Setup BlurView
+        BlurView blurView = findViewById(R.id.search_bar_blur);
+        BlurTarget blurTarget = findViewById(R.id.blur_target);
+
+        if (blurView != null && blurTarget != null) {
+            float radius = 4f;
+
+            View decorView = getWindow().getDecorView();
+            Drawable windowBackground = decorView.getBackground();
+
+            blurView.setupWith(blurTarget)
+                .setFrameClearDrawable(windowBackground)
+                .setBlurRadius(radius);
+
+            blurView.setBackground(getDrawable(R.drawable.search_bar_rounded_background));
+            blurView.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
+            blurView.setClipToOutline(true);
+        }
+
         FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
                 .initSearchToolbar(this /* activity */, toolbar,
                         SettingsEnums.SETTINGS_HOMEPAGE);
     }
-        if (homepageRevamp()) {
-            View toolbar = findViewById(R.id.search_action_bar);
-
-            // Setup BlurView
-            BlurView blurView = findViewById(R.id.search_bar_blur);
-            BlurTarget blurTarget = findViewById(R.id.blur_target);
-
-            if (blurView != null && blurTarget != null) {
-                float radius = 4f;
-
-                View decorView = getWindow().getDecorView();
-                Drawable windowBackground = decorView.getBackground();
-
-                blurView.setupWith(blurTarget)
-                    .setFrameClearDrawable(windowBackground)
-                    .setBlurRadius(radius);
-
-	        blurView.setBackground(getDrawable(R.drawable.search_bar_rounded_background));
-	        blurView.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
-	        blurView.setClipToOutline(true);
-            }
-
-            FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
-                    .initSearchToolbar(this /* activity */, toolbar,
-                            SettingsEnums.SETTINGS_HOMEPAGE);
-        } else {
-            final Toolbar toolbar = findViewById(R.id.search_action_bar);
-
-            // Setup BlurView
-            BlurView blurView = findViewById(R.id.search_bar_blur);
-            BlurTarget blurTarget = findViewById(R.id.blur_target);
-
-            if (blurView != null && blurTarget != null) {
-                float radius = 4f;
-
-                View decorView = getWindow().getDecorView();
-                Drawable windowBackground = decorView.getBackground();
-
-                blurView.setupWith(blurTarget)
-                    .setFrameClearDrawable(windowBackground)
-                    .setBlurRadius(radius);
-
-                blurView.setBackground(getDrawable(R.drawable.search_bar_rounded_background));
-                blurView.setOutlineProvider(ViewOutlineProvider.BACKGROUND);
-                blurView.setClipToOutline(true);
-            }
-
-            FeatureFactory.getFeatureFactory().getSearchFeatureProvider()
-                    .initSearchToolbar(this /* activity */, toolbar,
-                            SettingsEnums.SETTINGS_HOMEPAGE);
 
     private void initDashboardMessages() {
         boolean showDashboardMessages = android.provider.Settings.System.getInt(
@@ -932,45 +902,12 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     }
 
     private void updateHomepageAppBar() {
-        if (homepageRevamp() || !mIsEmbeddingActivityEnabled) {
-            return;
-        }
-        updateAppBarMinHeight();
-        if (mIsTwoPane) {
-            findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.GONE);
-            findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.VISIBLE);
-            findViewById(R.id.suggestion_container_two_pane).setVisibility(View.VISIBLE);
-        } else {
-            findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.VISIBLE);
-            findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.GONE);
-            findViewById(R.id.suggestion_container_two_pane).setVisibility(View.GONE);
-        }
     }
 
     private void updateHomepagePaddings() {
-        if (homepageRevamp() || !mIsEmbeddingActivityEnabled) {
-            return;
-        }
-        if (mIsTwoPane) {
-            int padding = getResources().getDimensionPixelSize(
-                    R.dimen.homepage_padding_horizontal_two_pane);
-            mMainFragment.setPaddingHorizontal(padding);
-        } else {
-            mMainFragment.setPaddingHorizontal(0);
-        }
-        mMainFragment.updatePreferencePadding(mIsTwoPane);
     }
 
     private void updateAppBarMinHeight() {
-        if (homepageRevamp()) {
-            return;
-        }
-        final int searchBarHeight = getResources().getDimensionPixelSize(R.dimen.search_bar_height);
-        final int margin = getResources().getDimensionPixelSize(
-                mIsEmbeddingActivityEnabled && mIsTwoPane
-                        ? R.dimen.homepage_app_bar_padding_two_pane
-                        : R.dimen.search_bar_margin);
-        findViewById(R.id.app_bar_container).setMinimumHeight(searchBarHeight + margin * 2);
     }
 
     private static class SuggestionFragCreator implements FragmentCreator {

@@ -30,82 +30,78 @@
      	android:scrollbarThumbHorizontal="@android:color/transparent"
         app:layout_behavior="com.android.settings.widget.HomepageAppBarScrollingViewBehavior">
         
-        <androidx.core.widget.NestedScrollView
-             android:id="@+id/main_content_scrollable_container"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             app:layout_behavior="com.android.settings.widget.FloatingAppBarScrollingViewBehavior">
-    <eightbitlab.com.blurview.BlurTarget
-        android:id="@+id/blur_target"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <androidx.core.widget.NestedScrollView
-            android:id="@+id/main_content_scrollable_container"
+        <eightbitlab.com.blurview.BlurTarget
+            android:id="@+id/blur_target"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-8dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            android:layout_height="match_parent"
-            android:paddingBottom="80dp"
-            android:clipToPadding="false">
-            <LinearLayout
-                android:id="@+id/homepage_container"
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/main_content_scrollable_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:layout_height="match_parent"
+                android:layout_marginTop="-8dp"
+                android:paddingBottom="80dp"
+                android:clipToPadding="false"
+                app:layout_behavior="com.android.settings.widget.FloatingAppBarScrollingViewBehavior">
+                
                 <LinearLayout
+                    android:id="@+id/homepage_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/homepage_title_margin_top"
-                    android:layout_marginStart="@dimen/card_highlight_margin_start"
-                    android:layout_marginEnd="@dimen/card_highlight_margin_end"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-                    <com.android.settings.utils.SettingsDashboardTextView
-                        android:id="@+id/homepage_title"
-                        android:text="@string/settings_label"
-                        style="@style/HomepageTitleText"
-                        android:layout_width="0dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                    <com.android.settings.utils.AvatarImageView
-                        android:layout_width="@dimen/custom_avatar_length"
-                        android:layout_height="@dimen/custom_avatar_length"
-                        android:layout_marginEnd="@dimen/avatar_margin_end"
-                        android:layout_gravity="center_vertical"
-                        android:accessibilityTraversalAfter="@id/homepage_title"
-                        android:contentDescription="@string/search_bar_account_avatar_content_description" />
+                        android:layout_marginTop="@dimen/homepage_title_margin_top"
+                        android:layout_marginStart="@dimen/card_highlight_margin_start"
+                        android:layout_marginEnd="@dimen/card_highlight_margin_end"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <com.android.settings.utils.SettingsDashboardTextView
+                            android:id="@+id/homepage_title"
+                            android:text="@string/settings_label"
+                            style="@style/HomepageTitleText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                        <com.android.settings.utils.AvatarImageView
+                            android:layout_width="@dimen/custom_avatar_length"
+                            android:layout_height="@dimen/custom_avatar_length"
+                            android:layout_marginEnd="@dimen/avatar_margin_end"
+                            android:layout_gravity="center_vertical"
+                            android:accessibilityTraversalAfter="@id/homepage_title"
+                            android:contentDescription="@string/search_bar_account_avatar_content_description" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/suggestion_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:id="@+id/suggestion_container_two_pane"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
+                    <FrameLayout
+                        android:id="@+id/contextual_cards_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/contextual_card_side_margin"
+                        android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
+
+                    <FrameLayout
+                        android:id="@+id/main_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="true"/>
                 </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
 
-                <FrameLayout
-                    android:id="@+id/suggestion_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-                <include
-                    android:id="@+id/suggestion_container_two_pane"
-                    layout="@layout/suggestion_container_two_pane"
-                    android:visibility="gone"/>
-
-                <FrameLayout
-                    android:id="@+id/contextual_cards_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/contextual_card_side_margin"
-                    android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
-
-                <FrameLayout
-                    android:id="@+id/main_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:animateLayoutChanges="true"/>
-            </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-
-    </eightbitlab.com.blurview.BlurTarget>
+        </eightbitlab.com.blurview.BlurTarget>
+    </com.android.settings.edgeeffect.SpringNestScrollView>
     
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -132,21 +128,4 @@
 
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    
-            <FrameLayout
-                android:id="@+id/contextual_cards_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/contextual_card_side_margin"
-                android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
-
-            <FrameLayout
-                android:id="@+id/main_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"/>
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</com.android.settings.edgeeffect.SpringNestScrollView>    
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

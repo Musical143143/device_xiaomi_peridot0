@@ -6,3 +6,7 @@ hal_client_domain(ifaa_app, vendor_hal_fingerprintpay)
 allow ifaa_app app_api_service:service_manager find;
 
 get_prop(ifaa_app, system_fingerprint_prop)
+
+# PowerOffAlarm
+typeattribute vendor_qti_poweroffalarm_app system_writes_mnt_vendor_violators;
+allow vendor_qti_poweroffalarm_app mnt_vendor_file:dir search;

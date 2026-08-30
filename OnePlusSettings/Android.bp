@@ -1,0 +1,22 @@
+android_app {
+    name: "OnePlusSettings",
+    defaults: ["SettingsLibDefaults"],
+
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+
+    platform_apis: true,
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "androidx.appcompat_appcompat",
+    ],
+
+    optimize: {
+        enabled: false,
+    },
+}

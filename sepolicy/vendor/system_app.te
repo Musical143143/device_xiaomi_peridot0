@@ -1,0 +1,18 @@
+# Allow system_app to locate and modify hardware sysfs and proc nodes
+allow system_app proc_touchpanel:dir search;
+allow system_app proc_touchpanel:file rw_file_perms;
+
+allow system_app proc_tri_state_key:dir search;
+allow system_app proc_tri_state_key:file rw_file_perms;
+
+allow system_app sysfs_oplus_display:dir search;
+allow system_app sysfs_oplus_display:file rw_file_perms;
+
+allow system_app sysfs_leds_vibrator:dir search;
+allow system_app sysfs_leds_vibrator:file rw_file_perms;
+
+allow system_app sysfs_tri_state_key:dir search;
+allow system_app sysfs_tri_state_key:file rw_file_perms;
+
+# Audio / Notification state toggles for Alert Slider
+allow system_app audioserver_service:service_manager find;

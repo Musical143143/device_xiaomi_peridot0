@@ -8,6 +8,12 @@
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
+
+# OnePlus Parts
+PRODUCT_PACKAGES += \
+    OnePlusSettings
+
+
 # Alert slider
 PRODUCT_PACKAGES += \
     KeyHandler \

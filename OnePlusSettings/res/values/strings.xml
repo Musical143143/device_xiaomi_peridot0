@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oneplus_settings_title">OnePlus Settings</string>
+    <string name="oneplus_settings_summary">Extra settings for OnePlus Nord 4</string>
+
+    <!-- Display -->
+    <string name="category_display">Display Features</string>
+    <string name="dc_dimming_title">DC Dimming (Anti-flicker)</string>
+    <string name="dc_dimming_summary">Reduces display PWM flicker in low brightness</string>
+    <string name="hbm_title">High Brightness Mode (HBM)</string>
+    <string name="hbm_summary">Forces maximum panel brightness for high outdoor visibility</string>
+    <string name="refresh_rate_title">Display Refresh Rate</string>
+    <string name="refresh_rate_summary">Force screen refresh rate profile</string>
+
+    <!-- Touch -->
+    <string name="category_touch">Touch and Gestures</string>
+    <string name="touchscreen_gesture_dt2w_title">Double tap to wake</string>
+    <string name="touchscreen_gesture_dt2w_summary">Wake the display by tapping twice</string>
+    <string name="touch_game_mode_title">Hyper Touch</string>
+    <string name="touch_game_mode_summary">Boost touch sampling rate up to 1000Hz for gaming</string>
+    <string name="edge_limit_title">Edge Mistouch Prevention</string>
+    <string name="edge_limit_summary">Suppress accidental touches along the outer bezel</string>
+    <string name="screen_off_gestures_title">Screen-off Gestures</string>
+    <string name="screen_off_gestures_summary">Support gestures (draw O for Camera, V for Torch)</string>
+
+    <!-- Alert Slider -->
+    <string name="category_slider">Alert Slider</string>
+    <string name="slider_top_position_title">Top Position</string>
+    <string name="slider_middle_position_title">Middle Position</string>
+    <string name="slider_bottom_position_title">Bottom Position</string>
+
+    <!-- Haptics -->
+    <string name="category_vibration">Haptics</string>
+    <string name="vibrator_strength_title">Vibration Strength</string>
+    <string name="vibrator_strength_summary">Adjust linear motor feedback intensity</string>
+</resources>

@@ -36,3 +36,4 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 103
 include vendor/oneplus/avalon/BoardConfigVendor.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/avalon/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += device/oneplus/avalon/sepolicy/vendor

@@ -1,0 +1,6 @@
+/proc/touchpanel(/.*)?                     u:object_r:proc_touchpanel:s0
+/proc/tri-state-key(/.*)?                  u:object_r:proc_tri_state_key:s0
+/sys/kernel/oplus_display(/.*)?            u:object_r:sysfs_oplus_display:s0
+/sys/devices/virtual/mi_display(/.*)?      u:object_r:sysfs_oplus_display:s0
+/sys/class/leds/vibrator(/.*)?             u:object_r:sysfs_leds_vibrator:s0
+/sys/devices/platform/.*tri_state_key.*    u:object_r:sysfs_tri_state_key:s0

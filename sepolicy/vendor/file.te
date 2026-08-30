@@ -1,0 +1,5 @@
+type proc_touchpanel, fs_type, proc_type;
+type proc_tri_state_key, fs_type, proc_type;
+type sysfs_oplus_display, fs_type, sysfs_type;
+type sysfs_leds_vibrator, fs_type, sysfs_type;
+type sysfs_tri_state_key, fs_type, sysfs_type;

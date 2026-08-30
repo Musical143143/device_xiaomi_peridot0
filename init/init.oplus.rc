@@ -13,6 +13,59 @@ on fs
 on boot
     # Display
     chmod 0000 /sys/kernel/oplus_display/hbm
+    # Touchpanel & Gestures Nodes
+    chown system system /proc/touchpanel/double_tap_enable
+    chmod 0660 /proc/touchpanel/double_tap_enable
+
+    chown system system /proc/touchpanel/game_switch_enable
+    chmod 0660 /proc/touchpanel/game_switch_enable
+
+    chown system system /proc/touchpanel/high_rate_mode
+    chmod 0660 /proc/touchpanel/high_rate_mode
+
+    chown system system /proc/touchpanel/oplus_tp_limit_enable
+    chmod 0660 /proc/touchpanel/oplus_tp_limit_enable
+
+    chown system system /proc/touchpanel/edge_limit_enable
+    chmod 0660 /proc/touchpanel/edge_limit_enable
+
+    chown system system /proc/touchpanel/gesture_enable
+    chmod 0660 /proc/touchpanel/gesture_enable
+
+    chown system system /proc/touchpanel/tp_gesture
+    chmod 0660 /proc/touchpanel/tp_gesture
+
+    chown system system /sys/devices/platform/goodix_ts.0/double_tap_enable
+    chmod 0660 /sys/devices/platform/goodix_ts.0/double_tap_enable
+
+    # Display Nodes (DC Dimming & HBM)
+    chown system system /sys/kernel/oplus_display/dimlayer_bl_en
+    chmod 0660 /sys/kernel/oplus_display/dimlayer_bl_en
+
+    chown system system /sys/devices/virtual/mi_display/main_display/dimlayer_bl
+    chmod 0660 /sys/devices/virtual/mi_display/main_display/dimlayer_bl
+
+    chown system system /sys/kernel/oplus_display/hbm
+    chmod 0660 /sys/kernel/oplus_display/hbm
+
+    chown system system /sys/kernel/oplus_display/hbm_mode
+    chmod 0660 /sys/kernel/oplus_display/hbm_mode
+
+    # Vibrator / Linear Motor Nodes
+    chown system system /sys/class/leds/vibrator/level
+    chmod 0660 /sys/class/leds/vibrator/level
+
+    chown system system /sys/class/leds/vibrator/vmax
+    chmod 0660 /sys/class/leds/vibrator/vmax
+
+    # Tri-State Alert Slider Nodes
+    chown system system /proc/tri-state-key/tri_state
+    chmod 0660 /proc/tri-state-key/tri_state
+
+    chown system system /sys/devices/platform/soc/soc:tri_state_key/tri_state
+    chmod 0660 /sys/devices/platform/soc/soc:tri_state_key/tri_state
+
+
 
 on post-fs-data
     # ADSP ramdump
